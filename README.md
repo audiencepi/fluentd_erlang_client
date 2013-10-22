@@ -3,7 +3,7 @@ Fluentd Erlang Client
 # How it works
 To get started, you need to set your environment variables
 
-	application:set_env(fluentd, fluentd_hostname, "127.0.0.1"),
+	application:set_env(fluentd, fluentd_host, "127.0.0.1"),
 	application:set_env(fluentd, fluentd_port, 24224),
 	application:start(fluentd).
 

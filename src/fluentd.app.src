@@ -1,0 +1,12 @@
+{application, fluentd,
+ [
+  {description, "Fluentd Erlang Client"},
+  {vsn, "0.1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { fluentd_app, []}},
+  {env, []}
+ ]}.

@@ -13,10 +13,7 @@ start_link() ->
 %% Supervisor callbacks
 %% ===================================================================
 init([]) ->
-    Children = [
-                {fluentd,
-                 {fluentd_client, start_link, []},
-                  permanent, 5000, worker, [fluentd]}
-               ],
+    Children = [{fluentd, {fluentd_client, start_link, []},
+                permanent, 5000, worker, [fluentd]} ],
     {ok, { {one_for_one, 10, 10}, Children} }.    
 

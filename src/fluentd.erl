@@ -11,9 +11,3 @@
 send(Label, RawData) -> 
     gen_server:cast(?WORKER, {send, Label, RawData}).
 
-
-
-
-    
-    
-

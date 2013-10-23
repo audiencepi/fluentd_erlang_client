@@ -14,8 +14,8 @@ start_link() ->
 %% gen_server callbacks
 %% =================================================================== 
 init([]) ->
-    {ok, Host} = get_env(fluentd_host, "127.0.0.1"),
-    {ok, Port} = get_env(fluentd_port, 24224),
+    Host = get_env(fluentd_host, "127.0.0.1"),
+    Port = get_env(fluentd_port, 24224),
     {ok, Sock} = gen_tcp:connect(Host, Port, [binary, {packet, 0}]),
     {ok, #state{host=Host, port=Port, sock=Sock}}.
     

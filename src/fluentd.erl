@@ -1,5 +1,5 @@
 -module(fluentd).
--export([sentlogs/3]).
+-export([send/2]).
 -define(WORKER, fluentd_client).
 
 %%%===================================================================

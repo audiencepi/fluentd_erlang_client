@@ -42,11 +42,9 @@ code_change(_OldVsn, State, _Extra) ->
 %%% Helpers/Private
 %%%===================================================================
 get_unix_timestamp() ->
-    {Msec,Sec,_} = erlang:now(), 
-    get_unix_timestamp({Msec,Sec,_}).
-
-get_unix_timestamp({Msec,Sec,_}) ->
-    (Msec * 1000000) + Sec.
+    {Msec,Sec,_} = erlang:now(),
+    Timestamp = (Msec * 1000000) + Sec,
+    Timestamp.
     
 get_env(Key) ->
     get_env(Key, undefined).
